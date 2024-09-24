@@ -81,8 +81,10 @@ function getTextFieldValueById(id) {
         document.getElementById(id).classList.add('bg-[#B4F461]');
     }   
 document.getElementById('blog-button').addEventListener('click', function(){
-    window.location.href = './blog.html';
-})            
-document.getElementById('home-button').addEventListener('click', function(){
-    window.location.href = './index.html';
-})            
+    window.location.href = 'https://saikat1076.github.io/B-10-assignment-5/blog.html';
+})
+
+document.getElementById('home-btn').addEventListener('click', function(){
+    window.location.href = 'https://saikat1076.github.io/B-10-assignment-5/index.html';
+    
+})
