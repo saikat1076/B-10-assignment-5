@@ -1,11 +1,31 @@
 function getTextFieldValueById(id) {
     const text = parseFloat(document.getElementById(id).innerText);
     return text;
-    }
+}
+function getTextFieldById(id) {
+    const text = String(document.getElementById(id).innerText);
+    return text;
+}
+
     function getInputFieldValueById(id) {
     const value = parseFloat(document.getElementById(id).value);
     return value;
     }
+function addHistory(inputAmount, programmeName) {
+    const historyItem = document.createElement('div');
+    historyItem.className =
+        "bg-white m-5 p-3 rounded-lg border-2 border-solid border[rgba(17, 17, 17, 0.1)] w-2/3";
+    historyItem.innerHTML = `
+    <p class="text-xl font-bold text-gray-500">${inputAmount} Taka ${programmeName}</p>
+    <p class="text-lg text-gray-500">Date: ${new Date().toDateString()} ${new Date().toTimeString()}</p>
+    `;
+    const historyContainer = document.getElementById("history-doc");
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
+}
+
+
+
     function clickBtn(id) {
         document.getElementById(id).addEventListener('click', function(event){
             event.preventDefault();
@@ -20,6 +40,9 @@ function getTextFieldValueById(id) {
             newBalance = accountBalance - inputAmount;
             document.getElementById('account-balance').innerText = newBalance;
             my_modal_1.showModal();
+            const programmeName = ('is Donated for famine-2024 at Feni, Bangladesh');
+            addHistory(inputAmount, programmeName);
+
             }
         }) 
     }
@@ -38,6 +61,8 @@ function getTextFieldValueById(id) {
                 newBalance = accountBalance - inputAmount;
                 document.getElementById('account-balance').innerText = newBalance;
                 my_modal_2.showModal();
+                const programmeName = ('is Donated for Flood Relief in Feni, Bangladesh');
+                addHistory(inputAmount, programmeName);
                 } 
             }) 
         }
@@ -56,6 +81,8 @@ function getTextFieldValueById(id) {
                 newBalance = accountBalance - inputAmount;
                 document.getElementById('account-balance').innerText = newBalance;
                 my_modal_3.showModal();
+                const programmeName = (' is Donated for Aid for Injured in the Quota Movement, Bangladesh');
+                addHistory(inputAmount, programmeName);
                 }
             }) 
         }
