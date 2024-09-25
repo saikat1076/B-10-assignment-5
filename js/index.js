@@ -36,7 +36,7 @@ function addHistory(inputAmount, programmeName) {
             newBalance = accountBalance - inputAmount;
             document.getElementById('account-balance').innerText = newBalance;
             my_modal_1.showModal();
-            const programmeName = ('is Donated for famine-2024 at Feni, Bangladesh');
+            const programmeName = ('is Donated for famine-2024 at Noakhali, Bangladesh');
             addHistory(inputAmount, programmeName);
 
             }
