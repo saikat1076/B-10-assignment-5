@@ -14,7 +14,7 @@ function getTextFieldById(id) {
 function addHistory(inputAmount, programmeName) {
     const historyItem = document.createElement('div');
     historyItem.className =
-        "bg-white m-5 p-3 rounded-lg border-2 border-solid border[rgba(17, 17, 17, 0.1)] w-2/3";
+        "bg-white mx-auto my-5 p-3 rounded-lg border-2 border-solid border[rgba(17, 17, 17, 0.1)] w-2/3";
     historyItem.innerHTML = `
     <p class="text-xl font-bold text-gray-500">${inputAmount} Taka ${programmeName}</p>
     <p class="text-lg text-gray-500">Date: ${new Date().toDateString()} ${new Date().toTimeString()}</p>
